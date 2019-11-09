@@ -9,7 +9,7 @@ Group members:
 
 Detect if action was an actual fall that would need for help. Data is collected from g-Force and Linear Acceleration sensors with the device in hand while performing action. We wanted to come up with a way to differentiate between a fall that may require emergency help for the person in question, and common actions that we came up with that feature simmilar The types of action recorded are:
 
-  1. Fall while moving      - simulate trip and fall on front
+  1. Fall while moving      - simulate trip and fall on front  
   ~~2. Fall from standstill   - simulate faint and fall on front~~  
   2. Sit                    - sit down on something e.g. bed, couch
   3. Lying down             - lie down on something e.g. bed, couch
