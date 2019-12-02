@@ -43,6 +43,8 @@ Low pass High Filtering- Noise filtering done for each activity and two differen
 Results:- The phone dropping has the highest change in value of linear acceleration for all dimensions. The walking and falling has second highest change in value of acceleration. While laying down and sitting have very small change as compared to falling and dropping. But the change for laying down was slightly higher than sitting.
 Change in Linear Acceleration: Drop>Fall>Laying>Sit
 
+Running Code- The file name data_analysis.ipynb which is in data-AS folder and require the path of files. So to run code change the path of files for each activity and then run code. Before and After Noise filtering graphs will be plotted.   
+
 ## Data Trimming and Statistics
 Done by David Liu - Processed data by trimming down unnecessary data points by identifying areas of interest. Created a ready to be used CSV files from processed data and calculated attributes of interests to be used in statistical analysis and machine learning classifications. Performed initial ANOVA tests and post hoc analysis to identify candidate attributes for classifiers.
 
