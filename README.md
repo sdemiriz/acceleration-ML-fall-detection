@@ -62,7 +62,7 @@ Done by Sedat Demiriz - Trained several classifiers with various parameter range
 
 Result: Based on the benchmarking performed in Python Code, the NNN Classifier was deemed the best fit for classifying the data, resulting in a 96% correct classification accuracy.
 
-To run, use `./classify.py` or `python3 classify.py` on the command line. This will draw data from the `data-processed` directory, report the highest scoring classifier accuracy on the command line, as well as place benchmarking plot in the 'ml-results' directory comparing all three Classifier methods on a range of parameters.
+To run, use `./classify.py` or `python3 classify.py` on the command line. This will draw data from the `data-processed` directory, report the highest scoring classifier accuracy on the command line, as well as place benchmarking plot in the 'ml-results' directory comparing all three Classifier methods on a range of parameters. Only methods from libraries used in the course and their exercises were used.
 
 ## What could be improved or added?
 
