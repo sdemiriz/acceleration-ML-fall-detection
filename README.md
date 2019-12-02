@@ -5,16 +5,18 @@ Group members:
 * David Liu, dla68
 * Amritpal Singh, aamritpa
 
+Our goal was to come up with a method to identify whether a reading from a person's device could be used to determine whether they have fallen or not, while not seeing any similar action as a fall and falsely activating. This project was inspired by the several stories of Apple Watches and other devices automatically calling emergency services when they detect a falling motion from their users.
+
 ## Fall Detection Project CMPT 353:
 
-Detect if action was an actual fall that would need for help. Data is collected from g-Force and Linear Acceleration sensors with the device in hand while performing action. We wanted to come up with a way to differentiate between a fall that may require emergency help for the person in question, and common actions that we came up with that feature simmilar The types of action recorded are:
+Detect if an action was an actual fall that would require the calling of emergency services to assist the individual. Data is collected from Linear Acceleration sensors with the device in hand while performing action. We wanted to come up with a way to differentiate between a fall that may require emergency help for the person in question, and common actions that we came up with that feature similar The types of action recorded are:
 
   1. Fall while moving      - simulate trip and fall on front  
-  2. Sit                    - sit down on something e.g. bed, couch
-  3. Lying down             - lie down on something e.g. bed, couch
-  4. Dropping phone         - dropping phone from waist height (likely on something soft)
+  2. Dropping phone         - dropping phone from waist height (likely on something soft)
+  3. Sit                    - sit down on something e.g. bed, couch
+  4. Lying down             - lie down on something e.g. bed, couch  
   
-A choice was made to hold device in hand for the reason of keeping the recordings consistent and avoiding falling on the device when in pocket to prevent any damage to it. The actions were standardized to simplify the situations but do not necessarily cover all directions of fall or various ways of falling, the goal was to keep the data consistent.
+A choice was made to hold device in hand for the reason of keeping the recordings consistent and avoiding falling on the device when in pocket to prevent any damage to it. The actions were standardized to simplify the situations but do not necessarily cover all directions of fall or various ways of falling, the main goal was to keep the data consistent.
 
 ## Data Collection: 
 
@@ -32,4 +34,22 @@ Data collected by each group member is located in folders `data-INITIALS`:
 The collective data folder `data-all` contains all data from the above three folders.  
 Each `.csv` file is labelled `experiment-initials-number.csv` e.g. `drop-sd-01.csv`.
 
+## Noise Filtering
 
+Done by Amritpal Singh - 
+
+## Data Trimming and Statistics
+
+Done by David Liu - 
+
+## Machine Learning-based Classification
+
+Done by Sedat Demiriz - Trained several classifiers with various parameter ranges to identify optimal prediction performance for the collected data. The data used to train the classifiers is the resulting data from the statistical analysis step right before. Classifiers used:
+
+* NB Gaussian Classifier
+* Decision Tree Classifier
+* N Nearest Neighbors Classifier
+
+Result: Based on the benchmarking performed in Python Code, the NNN Classifier was deemed the best fit for classifying the data, resulting in a 96% correct classification accuracy.
+
+To run, use `./classify.py` or `python3 classify.py` on the command line. This will draw data from the `data-processed` directory, report the highest scoring classifier accuracy on the command line, as well as place benchmarking plot in the 'ml-results' directory comparing all three Classifier methods on a range of parameters.
