@@ -40,7 +40,11 @@ Done by Amritpal Singh -
 
 ## Data Trimming and Statistics
 
-Done by David Liu - 
+Done by David Liu - Processed data by trimming down unnecessary data points by identifying areas of interest. Created a ready to be used CSV files from processed data and calculated attributes of interests to be used in statistical analysis and machine learning classifications. Performed initial ANOVA tests and post hoc analysis to identify candidate attributes for classifiers.
+
+Result: ANOVA tests indicated the various attributes indeed have a difference in means and tests performed will require post hoc analysis. Post hoc analysis revealed that all attributes and actions against falling are candidates for a machine learning classifier.
+
+To trim data, process_data.py must be ran in data-all folder containing all of the raw csv data files. The output of csvs of process_data.py was placed into /data-processed. To run the various statistical tests, stats_data.ipynb be in data-all folder and the various results will be displayed in the juypter notebook.
 
 ## Machine Learning-based Classification
 
