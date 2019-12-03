@@ -98,10 +98,12 @@ def main():
     print('Gaussian Score:')
     print(gauss.loc[gauss['valid_score'].idxmax()])
     print('\n')
+
     dec_t['index'] = dec_t.index
     print('Decision Tree Max Score:')
     print(dec_t.loc[dec_t['valid_score'].idxmax()])
     print('\n')
+
     neigh['index'] = neigh.index
     print('N Nearest Neighbors Max Score:')
     print(neigh.loc[neigh['valid_score'].idxmax()])
